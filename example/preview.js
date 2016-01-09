@@ -51,7 +51,27 @@ box.on('click', function(data) {
 
 // If box is focused, handle `enter`/`return` and give us some more content.
 box.key('enter', function(ch, key) {
+  fill(box, '|');
+  screen.render();
+});
+
+box.key('right', function(ch, key) {
   fill(box, '>');
+  screen.render();
+});
+
+box.key('left', function(ch, key) {
+  fill(box, '<');
+  screen.render();
+});
+
+box.key('up', function(ch, key) {
+  fill(box, '/');
+  screen.render();
+});
+
+box.key('down', function(ch, key) {
+  fill(box, '\\');
   screen.render();
 });
 
